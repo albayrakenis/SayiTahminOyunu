@@ -12,6 +12,7 @@ public class sayiTahmin {
             int tahmin = input.nextInt();
 // Bilgisayardan rastgele sayı alıyoruz
             int sayi = rnd.nextInt(101);
+            int tekrar=1;
             while (tahmin != sayi) {
                 if(tahmin < 0 || tahmin > 100 ) {
                     System.out.println("1 ile 100 arasında bir değer giriniz: ");
@@ -22,10 +23,11 @@ public class sayiTahmin {
                 else{
                     System.out.println("Daha küçük bir sayı giriniz: ");
                     tahmin = input.nextInt();}
+                tekrar++;
             }
 // Eğer sayımız ve tahmin birbirine eşitse while döngüsüne girmez
 // ve print komutunu yazdırırız
-            System.out.println("Tebrikler, kazandınız!"); }
+            System.out.println("Tebrikler, "+ tekrar +". tahminde kazandınız!"); }
 
     }
 
